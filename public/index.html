@@ -9,11 +9,11 @@
 
 
 
-<link rel="icon" type="image/ico" href="http://localhost:1313//favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313//favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313//favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="http://localhost:1313//android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="http://localhost:1313//apple-touch-icon.png">
+<link rel="icon" type="image/ico" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Mohit Ballikar">
 <meta name="description" content=""/>
@@ -42,7 +42,7 @@
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.11e9f0a5e6a89c2904166346a99925b6f4608a4728beec027c6b08044489721c.css" media="all">
+<link rel="stylesheet" href="/assets/combined.css" media="all">
 
 
 
@@ -65,20 +65,31 @@
     
 
     <h1 class="header">
-        <a href="http://localhost:1313/">Resume</a>
+        <a href="/documents/MohitBallikar.html">Resume</a>
     </h1>
 
     <h2> </h2>
 
-    <object class="pdf"
-        data="/assets/MohitBallikar.pdf"
-        type="application/pdf"
-        width="800"
-        height="500">
-        <p> Your Browser Does Not Support PDFs
-        <a href="/assets/MohitBallikar.pdf">Download the PDF</a>
-        .</p>
-    </object>
+    <script>
+      function checkPdfSupport() {
+        return 'application/pdf' in navigator.mimeTypes || 
+               (navigator.plugins && Array.from(navigator.plugins).some(p => p.name.includes('PDF')));
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('resume-container');
+        if (checkPdfSupport()) {
+          container.innerHTML = '<embed src="/documents/MohitBallikar.pdf" type="application/pdf" width="100%" height="800px">';
+        } else {
+          window.location.href = '/documents/MohitBallikar.html';  // Redirect to HTML version
+        }
+      });
+    </script>
+    <div id="resume-container">
+      <!-- Content will be replaced by JavaScript -->
+      <p>Loading resume... If nothing appears, <a href="/documents/MohitBallikar.pdf">download the PDF</a> or 
+         <a href="/documents/MohitBallikar.html">view the HTML version</a>.</p>
+    </div>
 
     
     <div class="flex">
