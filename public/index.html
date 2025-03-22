@@ -70,15 +70,26 @@
 
     <h2> </h2>
 
-    <object class="pdf"
-        data="/assets/MohitBallikar.pdf"
-        type="application/pdf"
-        width="800"
-        height="500">
-        <p> Your Browser Does Not Support PDFs
-        <a href="/assets/MohitBallikar.pdf">Download the PDF</a>
-        .</p>
-    </object>
+    <script>
+      function checkPdfSupport() {
+        return 'application/pdf' in navigator.mimeTypes || 
+               (navigator.plugins && Array.from(navigator.plugins).some(p => p.name.includes('PDF')));
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('resume-container');
+        if (checkPdfSupport()) {
+          container.innerHTML = '<embed src="static/documents/MohitBallikar.pdf" type="application/pdf" width="100%" height="800px">';
+        } else {
+          window.location.href = 'static/documents/MohitBallikar.html';  // Redirect to HTML version
+        }
+      });
+    </script>
+    <div id="resume-container">
+      <!-- Content will be replaced by JavaScript -->
+      <p>Loading resume... If nothing appears, <a href="static/documents/MohitBallikar.pdf">download the PDF</a> or 
+         <a href="static/documents/MohitBallikar.html">view the HTML version</a>.</p>
+    </div>
 
     
     <div class="flex">
