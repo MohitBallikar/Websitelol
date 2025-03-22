@@ -9,11 +9,11 @@
 
 
 
-<link rel="icon" type="image/ico" href="/static/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="static/android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+<link rel="icon" type="image/ico" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
 <link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Mohit Ballikar">
 <meta name="description" content=""/>
@@ -65,7 +65,7 @@
     
 
     <h1 class="header">
-        <a href="static/documents/MohitBallikar.html">Resume</a>
+        <a href="/documents/MohitBallikar.html">Resume</a>
     </h1>
 
     <h2> </h2>
@@ -79,16 +79,16 @@
       document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('resume-container');
         if (checkPdfSupport()) {
-          container.innerHTML = '<embed src="/static/documents/MohitBallikar.pdf" type="application/pdf" width="100%" height="800px">';
+          container.innerHTML = '<embed src="/documents/MohitBallikar.pdf" type="application/pdf" width="100%" height="800px">';
         } else {
-          window.location.href = '/static/documents/MohitBallikar.html';  // Redirect to HTML version
+          window.location.href = '/documents/MohitBallikar.html';  // Redirect to HTML version
         }
       });
     </script>
     <div id="resume-container">
       <!-- Content will be replaced by JavaScript -->
-      <p>Loading resume... If nothing appears, <a href="/static/documents/MohitBallikar.pdf">download the PDF</a> or 
-         <a href="static/documents/MohitBallikar.html">view the HTML version</a>.</p>
+      <p>Loading resume... If nothing appears, <a href="/documents/MohitBallikar.pdf">download the PDF</a> or 
+         <a href="/documents/MohitBallikar.html">view the HTML version</a>.</p>
     </div>
 
     
