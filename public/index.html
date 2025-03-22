@@ -3,19 +3,19 @@
   dir="ltr">
 
 <head>
-	<meta name="generator" content="Hugo 0.145.0">
+	<meta name="generator" content="Hugo 0.145.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
 
 
 
-<link rel="icon" type="image/ico" href="https://mohitballikar.dev//favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://mohitballikar.dev//favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://mohitballikar.dev//favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="https://mohitballikar.dev//android-chrome-192x192.png">
-<link rel="apple-touch-icon" sizes="180x180" href="https://mohitballikar.dev//apple-touch-icon.png">
+<link rel="icon" type="image/ico" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-<link rel="alternate" type="application/rss+xml" href="https://mohitballikar.dev/index.xml" title="Mohit Ballikar">
+<link rel="alternate" type="application/rss+xml" href="http://localhost:1313/index.xml" title="Mohit Ballikar">
 <meta name="description" content=""/>
 
 
@@ -26,9 +26,10 @@
     
 </title>
 
-<link rel="canonical" href="https://mohitballikar.dev/"/>
 
-<meta property="og:url" content="https://mohitballikar.dev/">
+<link rel="canonical" href="http://localhost:1313/"/>
+
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="Mohit Ballikar">
   <meta property="og:title" content="Home">
   <meta property="og:locale" content="en_us">
@@ -41,11 +42,7 @@
 
 
 
-<link rel="stylesheet" href="/assets/combined.min.11e9f0a5e6a89c2904166346a99925b6f4608a4728beec027c6b08044489721c.css" media="all">
-
-
-
-
+<link rel="stylesheet" href="/assets/combined.css" media="all">
 
 
 
@@ -63,14 +60,38 @@
     <header>
       
 
-<div class="header">
+<div>
 
     
 
-    <h1 class="header-title">
-        <a href="https://mohitballikar.dev/">Mohit Ballikar</a>
+    <h1 class="header">
+        <a href="/documents/MohitBallikar.html">Resume</a>
     </h1>
 
+    <h2> </h2>
+
+    <script>
+      function checkPdfSupport() {
+        return 'application/pdf' in navigator.mimeTypes || 
+               (navigator.plugins && Array.from(navigator.plugins).some(p => p.name.includes('PDF')));
+      }
+      
+      document.addEventListener('DOMContentLoaded', function() {
+        const container = document.getElementById('resume-container');
+        if (checkPdfSupport()) {
+          container.innerHTML = '<embed src="/documents/MohitBallikar.pdf" type="application/pdf" width="100%" height="800px">';
+        } else {
+          window.location.href = '/documents/MohitBallikar.html';  // Redirect to HTML version
+        }
+      });
+    </script>
+    <div id="resume-container">
+      <!-- Content will be replaced by JavaScript -->
+      <p>Loading resume... If nothing appears, <a href="/documents/MohitBallikar.pdf">download the PDF</a> or 
+         <a href="/documents/MohitBallikar.html">view the HTML version</a>.</p>
+    </div>
+
+    
     <div class="flex">
         
 
@@ -78,7 +99,7 @@
     </div>
 
     
-
+    
 </div>
 
     </header>
@@ -109,10 +130,8 @@
     
 
     
-    <p>Catalyzed by
-        <a href="https://gohugo.io/">Hugo</a>
-        and
-        <a href="https://github.com/tomfran/typo">tomfran/typo</a>
+    <p>Click Here to Contact Me ->
+        <a href=mailto:“mohitballikar@gmail.com”>Email</a>
     </p>
     
     
