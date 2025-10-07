@@ -1,7 +1,0 @@
-baseURL = 'https://mohitballikar.dev/'
-languageCode = 'en-us'
-title = 'Mohit Ballikar'
-resume = 'MohitBallikar.pdf'
-theme = ['hugo-embed-pdf-shortcode','typo']
-enableInlineShortcodes = true
-staticDir = ['static']
