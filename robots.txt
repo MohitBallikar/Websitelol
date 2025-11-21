@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /public/assets/
+Disallow: /styles.css
+Disallow: /script.js
