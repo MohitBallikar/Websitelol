@@ -147,11 +147,14 @@ h1 {
   color: var(--nerv-white);
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 25px;
   padding: 15px 25px;
   clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
   margin-bottom: 20px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  /* Force single line */
+  overflow-x: auto;
+  /* Allow scroll on very small screens if needed, though media query handles wrap */
 }
 
 .contact-info a {
@@ -159,8 +162,11 @@ h1 {
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  /* Icon above text */
   align-items: center;
   gap: 5px;
+  white-space: nowrap;
+  /* Prevent text wrapping */
 }
 
 .contact-info a:hover {
@@ -294,8 +300,8 @@ h2::before {
 
 .header-icon {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   vertical-align: middle;
   fill: var(--nerv-white);
   transition: fill 0.2s ease, transform 0.2s ease;
