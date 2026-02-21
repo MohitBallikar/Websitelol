@@ -1,2 +1,3 @@
 worker/lastfm-worker.js
 .env
+worker/letterboxd-worker.js
