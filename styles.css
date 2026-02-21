@@ -145,16 +145,28 @@ h1 {
   font-size: 0.85rem;
   background: var(--nerv-dark);
   color: var(--nerv-white);
-  display: inline-block;
-  padding: 5px 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  padding: 15px 25px;
   clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
   margin-bottom: 20px;
+  flex-wrap: nowrap;
+  /* Force single line */
+  overflow-x: auto;
+  /* Allow scroll on very small screens if needed, though media query handles wrap */
 }
 
 .contact-info a {
   color: var(--nerv-white);
   text-decoration: none;
-  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  /* Icon above text */
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+  /* Prevent text wrapping */
 }
 
 .contact-info a:hover {
@@ -283,6 +295,20 @@ h2::before {
 
 .entry-title a:hover .github-icon {
   fill: var(--primary-color);
+  transform: scale(1.1);
+}
+
+.header-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  fill: var(--nerv-white);
+  transition: fill 0.2s ease, transform 0.2s ease;
+}
+
+.contact-info a:hover .header-icon {
+  fill: var(--nerv-amber);
   transform: scale(1.1);
 }
 
