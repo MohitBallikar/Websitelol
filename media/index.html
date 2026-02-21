@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohit Ballikar - Media Charts</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="../static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../static/favicon-16x16.png">
+    <link rel="manifest" href="../static/site.webmanifest">
+    <link rel="shortcut icon" href="../static/favicon.ico">
+    <!-- Load the script for Last.fm -->
+    <script src="media.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>MEDIA CHARTS</h1>
+            <div class="contact-info">
+                <a href="/">Back to Resume</a> |
+                <a href="https://github.com/MohitBallikar">github.com/MohitBallikar</a>
+            </div>
+            <p>Weekly listening trends and film logs synced directly from Last.fm and Letterboxd. Data updates
+                dynamically.</p>
+        </header>
+
+        <section class="section visible">
+            <h2 id="lastfm" class="media-header">Last.fm Weekly Top 25</h2>
+            <div id="loading-spinner" class="loading-text">SYNCING WITH MAGI...</div>
+            <div id="lastfm-grid" class="media-grid" style="display: none;">
+                <!-- JS fills this dynamically -->
+            </div>
+            <div id="error-message" class="error-text" style="display: none;">FAILED TO ESTABLISH CONNECTION WITH API.
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
